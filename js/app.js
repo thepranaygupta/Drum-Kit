@@ -1,9 +1,9 @@
 function playSound(e) {
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
     if (!audio) return;
 
-    key.classList.add('playing');
+    key.classList.add('play');
     audio.currentTime = 0;
     audio.play();
 }
